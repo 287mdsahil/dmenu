@@ -736,7 +736,7 @@ main(int argc, char *argv[])
 		else
 			usage();
 
-	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
+	if (!XSupportsLocale())
 		fputs("warning: no locale support\n", stderr);
 	if (!(dpy = XOpenDisplay(NULL)))
 		die("cannot open display");
